@@ -1,6 +1,5 @@
 # Django Storefront Intro to Django Project
-A storefront project the introduces the user/coder to the fundamentals of django
-such as Views, Models, Migrations, and connecting your DB to Django.
+A storefront project the introduces the user/coder to the fundamentals of django such as Views, Models, Migrations, and connecting your DB to Django.
 
 ## To create project 
 1. Install django inside a created virtual environment:
