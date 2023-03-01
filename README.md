@@ -59,7 +59,7 @@ To REVERT MIGRATIONS:
 python manage.py migrate app_name number_of_migration
 ``` 
 
-Cannot currently connect to MySQL Workbench because of processor architecture (M1) problems with mysqlclient 
+Cannot currently connect to MySQL Workbench because of processor architecture (M1) problems with mysqlclient package
 
 ```bash
 (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64'))
