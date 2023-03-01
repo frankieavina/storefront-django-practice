@@ -58,3 +58,11 @@ To REVERT MIGRATIONS:
 ```bash
 python manage.py migrate app_name number_of_migration
 ``` 
+
+Cannot currently connect to MySQL Workbench because of processor architecture (M1) problems with mysqlclient 
+
+```bash
+(mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64'))
+    version_info, _mysql.version_info, _mysql.__file__
+NameError: name '_mysql' is not defined
+``` 
