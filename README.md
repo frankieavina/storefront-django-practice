@@ -111,3 +111,10 @@ pymysql.version_info = (1, 4, 2, “final”, 0)
 
 pymysql.install_as_MySQLdb()
 ``` 
+
+## Django ORM (object relational mapper)
+Django ORM maps object to relational records and lets you interact with your database.
+
+For examples look at playground folder -> views.py and you'll see a couple examples
+
+Most of the methods return 
