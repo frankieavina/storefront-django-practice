@@ -13,6 +13,9 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 class Tag(models.Model):
     label = models.CharField(max_length=255)
 
+    def __str__(self) -> str:
+        return self.label
+
 class TagItem(models.Model):
     tag = models.ForeignKey(Tag, on_delete=models.CASCADE)
     # we need two attributes to identify an object outside the Tags App(find any records in any table)
