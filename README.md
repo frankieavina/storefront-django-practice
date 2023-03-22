@@ -57,7 +57,6 @@ You can take a look at store for a view of one to one, one to many, and many to 
 Similarly, you can take a look at likes app to view generic relationship implementation. 
 
 ## Database and Migrations
-
 Migrations are used to create update our DB tables off our models. In order to RUN A MIGRATION:
 
 ```bash
@@ -117,4 +116,26 @@ Django ORM maps object to relational records and lets you interact with your dat
 
 For examples look at playground folder -> views.py and you'll see a couple examples
 
-Most of the methods return 
+Most of the methods return querysets or objects depending on which method is being used. 
+
+## Admin Site
+Setting up Admin Site
+1. Create user 
+``` 
+./manage.py createsuperuser 
+``` 
+2. Go back to .../admin and login with the user and password created
+
+Note: django.contrib.sessions needs to be installed in APPS then do a migrate
+
+To Register Models 
+``` 
+from . import models
+
+admin.site.register(models.Name_of_Model)
+``` 
+or  
+``` 
+@admin.register(models.Name_of_Model) 
+class Name_of_Model_Admin(admin.ModelAdmin):
+``` 

@@ -7,7 +7,6 @@ from django.utils.html import format_html, urlencode
 from django.urls import reverse
 from django.contrib.contenttypes.admin import GenericTabularInline
 from tags.models import TagItem
-from django_admin_display import admin_display
 
 ########------------------------------------------------------------------##################
 # adding a section in product admin to manage the tags for the product object
@@ -37,7 +36,7 @@ class ProductAdmin(admin.ModelAdmin):
         return product.collection.title
     
     #adding a computed column that will show low or ok depending on inventory
-    # @admin_display(ordering='inventory') not working 
+    @admin.display(ordering='inventory')
     def inventory_status(self, product):
         if product.inventory < 10:
             return 'Low'
